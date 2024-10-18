@@ -2,7 +2,7 @@
 test:
   hosts:
     wa-dev-docker00:
-      ansible_host: 10.3.0.110
+      ansible_host: 10.3.0.122
   vars:
     env: test
     seeder_docker_tag: develop
@@ -12,7 +12,7 @@ test:
     seeder_db_pass: "{{ seeder_db_pass_vault }}"
     seeder_django_allowed_hosts: app.webarchiv.cz
     seeder_django_debug: 'False'
-    treafik_seeder_rule: "Host(`app.webarchiv.cz`)"
-    treafik_seeder_static_rule: "Host(`app.webarchiv.cz`) && (PathPrefix(`/static`) || PathPrefix(`/media`))"
-    treafik_seeder_vyvoj_rule: "Host(`app.webarchiv.cz`) && PathPrefix(`/vyvoj`)"
-    treafik_api_rule: "Host(`wa-dev-docker00`) || Host(`10.3.0.110`)"
+    treafik_seeder_rule: "Host(`10.3.0.122`)"
+    treafik_seeder_static_rule: "Host(`10.3.0.122`) && (PathPrefix(`/static`) || PathPrefix(`/media`))"
+    treafik_seeder_vyvoj_rule: "Host(`10.3.0.122`) && PathPrefix(`/vyvoj`)"
+    treafik_api_rule: "Host(`wa-dev-docker01`) || Host(`10.3.0.122`)"
