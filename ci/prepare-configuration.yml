@@ -36,6 +36,7 @@
         dest: /home/ansible/seeder/
         mode: u+x
       loop:
-        - run.sh
-        - dump-screenshots.sh
-        - update_vyvoj.sh
+      # TODO: make custom run script for testing
+        # - run.sh
+        # - dump-screenshots.sh
+        # - update_vyvoj.sh
